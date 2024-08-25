@@ -1,7 +1,7 @@
 package com.davdprv.mazeSolver;
 
 import com.davdprv.mazeSolver.commands.MazeCommandExecutor;
-import com.davdprv.mazeSolver.commands.MazeInspectExecutor;
+import com.davdprv.mazeSolver.commands.MazeInspectCommandExecutor;
 import com.davdprv.mazeSolver.commands.MazeSolveCommandExecutor;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,7 +18,7 @@ public final class MazeSolver extends JavaPlugin {
 
         MazeCommandExecutor hMaze = new MazeCommandExecutor(saveFile);
         MazeSolveCommandExecutor hMazeSolve = new MazeSolveCommandExecutor(saveFile);
-        MazeInspectExecutor hMazeInspect = new MazeInspectExecutor();
+        MazeInspectCommandExecutor hMazeInspect = new MazeInspectCommandExecutor();
 
         this.getCommand("maze").setExecutor(hMaze);
         this.getCommand("mazesolve").setExecutor(hMazeSolve);
