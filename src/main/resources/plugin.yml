@@ -1,0 +1,25 @@
+name: MazeSolver
+version: 1.0.0
+main: com.davdprv.mazeSolver.MazeSolver
+description: A maze solver
+author: David Dewes
+website: https://david-dewes.de
+api-version: '1.20.6'
+commands:
+  maze:
+    description: "Scans the maze. Corners are the world coordinates, m and n the width and length of the maze."
+    usage: "/maze <corner_bl_x> <corner_bl_z> <corner_tr_x> <corner_tr_z> <y_level> <m> <n>"
+    permission: maze.scan
+    permission-message: "You do not have permission to use this command"
+  mazesolve:
+    description: "Solves the scanned maze. Anchor is the world corner coordinate from where every direction is positive."
+    usage: "/mazesolve <anchor_x> <anchor_z> <y_level>"
+    permission: maze.solve
+    aliases: [solve]
+    permission-message: "You do not have permission to use this command"
+  mazeinspect:
+    description: "Inspects a block in the maze and gives back all possible information."
+    usage: "/mazeinspect <block_x> <block_y> <block_z>"
+    permission: maze.inspect
+    aliases: [inspect]
+    permission-message: "You do not have permission to use this command"
